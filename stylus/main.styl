@@ -1,0 +1,72 @@
+@import './_tokens.styl'
+
+html
+	box-sizing border-box
+	font-family FFBody
+	font-size 62.5%
+	scroll-behavior smooth
+
+*,*::before,*::after
+	box-sizing inherit
+	margin 0
+
+body
+	overflow-x hidden
+	font-size 1.6rem
+
+img
+	max-width 100%
+	height auto
+
+.header
+	position relative
+	height 100px
+	display flex
+	justify-content space-between
+	align-items center
+	padding 0 5%
+	&__links--mobile
+		display none
+		position absolute
+		margin-left auto
+		margin-right auto
+		left 0
+		right 0
+		text-align center
+		margin-top 370px
+		width 80%
+		max-width 400px
+		padding 20px 0
+		background-color VeryLightGray
+		border-radius 5px
+		box-shadow #00000066 3px 3px 10px 1px
+		&.is-active
+			display block
+		&__ul
+			padding 0
+			list-style none
+			&__li
+				margin 20px 0
+				& > a
+					color VeryDarkBlue
+					text-decoration none
+					font-weight FWBold
+					&:hover
+						text-decoration underline
+	&__links--desktop
+		display none
+
+@media screen and (min-width 900px)
+	.header
+		& > .hamburger
+			display none
+		&__links--mobile.is-active
+			display none
+		&__links--desktop
+			display block
+			&__ul
+				display flex
+				list-style none
+				&__li
+						text-decoration none
+						margin 0 10px
