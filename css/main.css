@@ -11,9 +11,13 @@ html {
   margin: 0;
 }
 body {
-  overflow-x: hidden;
   font-size: 1.6rem;
   color: #1d1e25;
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -29,6 +33,7 @@ img {
 }
 .header {
   position: relative;
+  z-index: 20;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -76,26 +81,31 @@ img {
   display: none;
 }
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -170px;
 }
 .hero__figure {
+  position: relative;
+  z-index: 10;
   width: 100%;
   padding: 0 5%;
   padding-top: 200px;
-  margin-top: -170px;
-  background-image: url("../images/bg-tablet-pattern.svg");
-  background-position-x: 50px;
-  background-size: 110%;
-  background-repeat: no-repeat;
   text-align: center;
 }
 .hero__article {
+  position: relative;
+  z-index: 10;
   text-align: center;
   padding: 0 5%;
+}
+.hero__article > * {
+  position: relative;
+  z-index: 10;
 }
 .hero__article__title {
   font-size: 4rem;
@@ -119,10 +129,19 @@ img {
 .hero__article__button:hover {
   background-color: #f5866a;
 }
-@media screen and (min-width: 650px) {
-  .hero__figure {
-    background-position-y: -250px;
-  }
+.hero__article__background {
+  position: absolute;
+  top: 0;
+  margin-top: -100px;
+  z-index: 0;
+  max-height: 400px;
+}
+.hero__background {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  margin-right: -100px;
+  max-height: 650px;
 }
 @media screen and (min-width: 900px) {
   .hero {
@@ -133,11 +152,17 @@ img {
   .hero__figure {
     max-height: 50%;
     text-align: end;
-    background-position-y: -100px;
   }
   .hero__article {
     text-align: start;
-    padding-top: 50px;
+    padding-top: 200px;
+    margin-left: 40px;
+  }
+  .hero__article__background {
+    display: none;
+  }
+  .hero__background {
+    max-height: 85%;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -187,21 +212,16 @@ img {
 }
 @media screen and (min-width: 1400px) {
   .hero {
-    background-image: url("../images/bg-tablet-pattern.svg");
-    background-repeat: no-repeat;
-    background-position-x: 130%;
-    background-position-y: -200px;
-    margin-top: -100px;
-    padding-top: 100px;
-  }
-  .hero__figure {
-    background-image: none;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .hero__article__title {
-    font-size: 6rem;
+    font-size: 6.5rem;
     line-height: 60px;
   }
   .hero__article__text {
-    padding-right: 250px;
+    padding-right: 200px;
+    font-size: 2rem;
   }
 }
