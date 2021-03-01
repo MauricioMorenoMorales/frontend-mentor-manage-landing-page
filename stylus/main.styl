@@ -74,17 +74,13 @@ img
 		padding-top 200px
 		margin-top -170px
 		background-image url('../images/bg-tablet-pattern.svg')
-		// background-position-y -200px
 		background-position-x 50px
 		background-size 110%
 		background-repeat no-repeat
+		text-align center
 	&__article
 		text-align center
 		padding 0 5%
-		// background-image url('../images/bg-tablet-pattern.svg')
-		// background-position bottom right
-		// background-size 90% 70%
-		// background-repeat no-repeat
 		&__title
 			font-size 4rem
 			line-height 50px
@@ -105,17 +101,12 @@ img
 		justify-content space-between
 		align-items flex-start
 		&__figure
-			max-height 70%
+			max-height 50%
+			text-align end
 			background-position-y -100px
 		&__article
 			text-align start
 			padding-top 50px
-			// &__title
-			// 	font-size 6rem
-			// 	line-height 60px
-			&__text
-				// padding-right 300px
-				// font-size 2.7rem
 
 
 
@@ -145,7 +136,20 @@ img
 			display block
 			Button()
 
+
 @media screen and (min-width 1400px)
-	.hero__article__title
-		font-size 6rem
-		line-height 60px
+	.hero
+		background-image url('../images/bg-tablet-pattern.svg')
+		background-repeat no-repeat
+		background-position-x 130%
+		background-position-y -200px
+		margin-top -100px
+		padding-top 100px
+		&__figure
+			background-image none
+		&__article
+			&__title
+				font-size 6rem
+				line-height 60px
+			&__text
+				padding-right 250px
