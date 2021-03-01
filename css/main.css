@@ -151,6 +151,7 @@ img {
   flex-direction: column;
 }
 .differences__intro {
+  position: relative;
   text-align: center;
   margin-bottom: 50px;
   padding: 0 5%;
@@ -161,6 +162,9 @@ img {
 .differences__intro__title {
   font-size: 3rem;
   margin-bottom: 20px;
+}
+.differences__intro__background {
+  display: none;
 }
 .differences__points__item__title {
   display: flex;
@@ -222,6 +226,12 @@ img {
   }
   .differences__intro__text {
     padding-right: 100px;
+  }
+  .differences__intro__background {
+    display: block;
+    margin-left: -250px;
+    margin-top: 20px;
+    max-width: 400px;
   }
   .differences__points__item__title__text {
     background-color: #fff;
@@ -290,6 +300,9 @@ img {
     font-size: 2rem;
   }
   .differences {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 2rem;
   }
   .differences__intro__title {
