@@ -132,7 +132,7 @@ img {
 .hero__article__background {
   position: absolute;
   top: 0;
-  margin-top: -100px;
+  margin-top: 50px;
   z-index: 0;
   max-height: 400px;
 }
@@ -142,6 +142,54 @@ img {
   right: 0;
   margin-right: -100px;
   max-height: 650px;
+}
+.differences {
+  position: relative;
+  z-index: 10;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.differences__intro {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 5%;
+}
+.differences__intro > p {
+  color: #9095a7;
+}
+.differences__intro__title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.differences__points__item__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-left: 5%;
+}
+.differences__points__item__title__number {
+  position: relative;
+  z-index: 10;
+  background-color: #f25f3a;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+.differences__points__item__title__text {
+  position: relative;
+  z-index: 5;
+  background-color: #fff0eb;
+  padding: 5px;
+  padding-left: 30px;
+  width: 100%;
+  margin-left: -20px;
+  font-weight: 700;
+}
+.differences__points__item__text {
+  padding: 0 5%;
+  color: #9095a7;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 900px) {
   .hero {
