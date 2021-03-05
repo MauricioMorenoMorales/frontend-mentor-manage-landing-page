@@ -203,8 +203,11 @@ img {
   font-size: 3rem;
 }
 .slider__container {
+  position: relative;
   display: flex;
   padding-left: 5%;
+  margin-left: 0;
+  transition: 0s ease-in;
 }
 .slider__container__item {
   margin-top: 80px;
